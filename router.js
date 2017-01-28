@@ -12,6 +12,7 @@ router.get('/profile', (req, res) => {
     const a = req.query.atest;
     const b = req.query.btest;
 	res.send(profile(a + " " + b));
+
 });
 
 
