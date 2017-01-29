@@ -33,7 +33,7 @@ app.post('/create', (req,res) => {
       database: 'c9'
     })
     var all_rows;
-    // connection.connect()
+    connection.connect()
     var random_loan;
     var selectedrow = {}
     var query = 'insert into loans (fullname, amount, photo, industry, interest_rate, duration_days) values ("'+fullname+'","'+amount+'","'+photo+'","'+industry+'","'+interest_rate+'","'+duration_days+'")'
@@ -43,46 +43,12 @@ app.post('/create', (req,res) => {
         
         
         //*********
-        var all_rows;
-        connection.connect()
-        var random_loan;
-        var selectedrow = {}
-        var best_loan = {}
-        connection.query('SELECT * from loans WHERE fullname="'+req.params.fullname+'"', function (err, rows, fields) {
-          if (err) throw err
-        
-          selectedrow['fullname'] = rows[0].fullname
-          selectedrow['amount'] = rows[0].amount
-          selectedrow['photo'] = rows[0].photo
-          selectedrow['industry'] = rows[0].industry
-          selectedrow['interest_rate'] = rows[0].interest_rate
-          selectedrow['duration_days'] = rows[0].duration_days
-        //   console.log(selectedrow)
-            connection.query('select * from loans inner join loan_matches on loans.fullname=loan_matches.borrower_fullname where loans.fullname="' + req.params.fullname + '"', function (err, rows, fields){
-                if (err) throw err
-                if (rows[0] == undefined) {
-                    best_loan['empty'] = "Nobody has bid for this loan yet."
-                    best_loan['lender_fullname'] = ""
-                    best_loan['lender_email'] = ""
-                }
-                else {
-                    best_loan['empty'] = ""
-                    // get info into the best_loan hash
-                    best_loan['lender_fullname'] = rows[0].lender_fullname + " has the lowest bid!"
-                    // best_loan[borrower_fullname] = rows[0].borrower_fullname
-                    best_loan['lender_email'] = " Contact: " + rows[0].lender_email
-                    // console.log(best_loan)
-                    
-                }
-                res.send(loan(selectedrow, best_loan));
-                // connection.end()
-            })
         
         //*********
         
         
         
-    //   res.send(loan(fullname));
+      res.send("<script>window.location.href = './loan/"+encodeURIComponent(fullname)+"'</script>");
     })
     
      // const a = req.query.atest;
@@ -91,8 +57,8 @@ app.post('/create', (req,res) => {
 
     
     
-    // connection.end()
-    })
+    connection.end()
+    
 })
 
 app.get('/queue', (req, res) => {
