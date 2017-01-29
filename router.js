@@ -70,6 +70,7 @@ router.get('/loan/:fullname', (req, res) => {
     connection.connect()
     var random_loan;
     var selectedrow = {}
+    var best_loan = {}
     connection.query('SELECT * from loans WHERE fullname="'+req.params.fullname+'"', function (err, rows, fields) {
       if (err) throw err
     
@@ -80,12 +81,28 @@ router.get('/loan/:fullname', (req, res) => {
       selectedrow['interest_rate'] = rows[0].interest_rate
       selectedrow['duration_days'] = rows[0].duration_days
     //   console.log(selectedrow)
-    
-    // console.log("****")
-        console.log(selectedrow)
-	    res.send(loan(selectedrow));
+        connection.query('select * from loans inner join loan_matches on loans.fullname=loan_matches.borrower_fullname where loans.fullname="' + req.params.fullname + '"', function (err, rows, fields){
+            if (err) throw err
+            if (rows[0] == undefined) {
+                best_loan['empty'] = "Nobody has bid for this loan yet."
+                best_loan['lender_fullname'] = ""
+                best_loan['lender_email'] = ""
+            }
+            else {
+                best_loan['empty'] = ""
+                // get info into the best_loan hash
+                best_loan['lender_fullname'] = rows[0].lender_fullname + " has the lowest bid!"
+                // best_loan[borrower_fullname] = rows[0].borrower_fullname
+                best_loan['lender_email'] = " Contact: " + rows[0].lender_email
+                // console.log(best_loan)
+                
+            }
+            res.send(loan(selectedrow, best_loan));
+            connection.end()
+        })
+    // res.send(loan(selectedrow, best_loan));
     })
-	connection.end()
+	
 
 });
 
