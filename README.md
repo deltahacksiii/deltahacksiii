@@ -2,7 +2,7 @@
 
 ![landing page](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot4.png)
 
-### This hack aims to solve the typical problems surrounding loans
+### This hack aims to solve the typical problems surrounding loans.
 
 Loaning money can be difficult, especially when interests rates are so high, and many loan sharks seem to have alterior motives when you can't find other means. Some groups have an increased difficulty due to their situation; they may be immigrants with a language barrier, refugees without a credit history, or people with a lower income striving for an education. What if there was an app that provided a trustworthy platform for more open minded loaners and put the focus back on benefitting borrowers as much as possible?
 
