@@ -20,11 +20,16 @@
 
 // connection.end()
 
-module.exports = function(testvar) {
+module.exports = function(row) {
 	return (
     `
-    <h1>hello world</h1>
-    <p>${JSON.stringify(all_rows)}</p>
+    <h1>Loan Status</h1>
+    <p><img src='${row.photo}'></p>
+    <p>Name: ${row.fullname}</p>
+    <p>Amount: $${row.amount}</p>
+    <p>Industry: ${row.industry}</p>
+    <p><strong>Interest rate: ${row.interest_rate}</strong></p>
+    <p>Duration: ${row.duration_days} days</p>
     `
 )};
 
