@@ -33,9 +33,9 @@ module.exports = function(row, row2) {
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <h1>Loan Status</h1>
-    <div>
-        <p><img src='${row.photo}'></p>
+    <h1 style="text-align:center; margin:0 auto;">Loan Status</h1><br>
+    <div style="text-align:center; margin:0 auto;">
+        <p><img class="contained" src='${row.photo}'></p>
         <p>Name: ${row.fullname}</p>
         <p>Amount: $${row.amount}</p>
         <p>Industry: ${row.industry}</p>
@@ -43,10 +43,10 @@ module.exports = function(row, row2) {
         <p>Duration: ${row.duration_days} days</p>
     </div>
     <hr>
-    <div>
+    <div style="text-align:center; margin:0 auto;">
         <h3>${row2.empty}</h3>
         <h3>${row2.lender_fullname}${row2.lender_email}</h3>
-        <p>Make a lower bid! <input type="text" placeholder="name" id="name"><input type="text" placeholder="email" id="email"><input type="button" value="submit" onclick="make_a_bid()"></p>
+        <p>Make a lower bid! <input type="text" placeholder="New interest rate" id="bid"><input type="text" placeholder="name" id="name"><input type="text" placeholder="email" id="email"><input type="button" value="submit" onclick="make_a_bid()"></p>
     </div>
     
     <script>
@@ -56,10 +56,26 @@ module.exports = function(row, row2) {
             // borrower_fullname = "${row.fullname}"
             url = location.href + "/bid?lender_fullname="+lender_fullname+"&lender_email="+lender_email+"&borrower_fullname="+borrower_fullname
             console.log(url)
-            window.location = "./showdown"
+            // window.location = "./thankyou"
         }
     </script>
-    
+    <style>
+      .contained {
+        max-width: 150px;
+        max-height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+      }
+      .card {
+        border: 2px solid black;
+        padding: 30 px;
+        padding-top: 30 px;
+      }
+      .middle {
+        text-align: center;
+        margin: 0 auto;
+      }
+    </style>
     `
 )};
 

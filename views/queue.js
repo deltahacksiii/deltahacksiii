@@ -39,7 +39,10 @@ module.exports = function(row) {
     </div>
     <hr>
     <div class="row">  
-      <div class="col-lg-4 col-sm-4 middle"><a href="./queue">Swipe left :(</a></div>
+      <div class="col-lg-4 col-sm-4 middle">
+        <a href="./queue">Swipe left :(<br><br><br>
+        <img src="http://www.pd4pic.com/images800_/back-flat-icon-left-right-blue-symbol-arrow.png" class="contained">
+      </a></div>
       <div class="col-lg-4 col-sm-4 card middle">
         
         <p><img class='contained' src='${row.photo}'></p>
@@ -49,7 +52,9 @@ module.exports = function(row) {
         <p><strong>Interest rate: ${row.interest_rate}%</strong></p>
         <p>Duration: ${row.duration_days} days</p>
       </div>
-      <div class="col-lg-4 col-sm-4 middle"><a href="./loan/${row.fullname}">Swipe right <3</a></div>
+      <div class="col-lg-4 col-sm-4 middle"><a href="./loan/${row.fullname}">Swipe right <3<br><br><br>
+        <img src="http://teamdsd.com/genesis/wp-content/themes/optimizePressTheme/lib/assets/images/arrows/arrows-3-red-left.png" class="contained">
+      </a></div>
     </div>
     
     

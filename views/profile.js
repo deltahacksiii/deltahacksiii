@@ -68,18 +68,22 @@ module.exports = function(testvar) {
 </div>
 <div id="section2" class="container-fluid">
   <h1>Loan</h1>
+  <p>How much money do you need to loan?</p>
   <input id = "textid2" type="text"></input>
 </div>
 <div id="section3" class="container-fluid">
   <h1>Interest Rate</h1>
-  <input id = "textid3" type="text"></input>
+    <p>What's the lowest interest rate you've been offered outside of Lendr?</p>
+    <input id = "textid3" type="text"></input>
 </div>
 <div id="section4" class="container-fluid">
   <h1>Duration</h1>
+  <p>How many days do you need until you can pay back this loan?</p>
   <input id = "textid4" type="text"></input>
 </div>
 <div id="section5" class="container-fluid">
   <h1>Industry</h1>
+  <p>What industry will this loan be put to use in?</p>
   <input id = "textid5" type="text"></input>
 </div>
 <div id="section6" class="container-fluid">
@@ -99,30 +103,54 @@ module.exports = function(testvar) {
 <h1>Confirm</h1>
   <input id="clickMe" type="button" value="clickme" onclick="doSomething()" />
 </div>
+  <form style="display: hidden" action="./create" method="POST" id="form">
+    <input type="hidden" id="var1" name="fullname" value=""/>
+    <input type="hidden" id="var2" name="amount" value=""/>
+    <input type="hidden" id="var3" name="photo" value=""/>
+    <input type="hidden" id="var4" name="industry" value=""/>
+    <input type="hidden" id="var5" name="interest_rate" value=""/>
+    <input type="hidden" id="var6" name="duration_days" value=""/>
+  </form>
 </body>
 </html>
 
 
 <script>
 function doSomething() { 
-name = document.getElementById('textid').value;
-loan = document.getElementById('textid2').value;
-interestRate = document.getElementById('textid3').value;
-duration = document.getElementById('textid4').value;
-industry = document.getElementById('textid5').value;
-picture = document.getElementById('fileInput').value;
+  name = document.getElementById('textid').value;
+  loan = document.getElementById('textid2').value;
+  interestRate = document.getElementById('textid3').value;
+  duration = document.getElementById('textid4').value;
+  industry = document.getElementById('textid5').value;
+  picture = document.getElementById('fileInput').value;
+  var photo = "http://deltahacks.com/src/images/logo@2x.png"
+  
+  console.log(name);
+  console.log(loan);
+  console.log(interestRate);
+  console.log(duration);
+  console.log(industry);
+  console.log(picture);
+  
+  
+  
+  // thank you http://stackoverflow.com/a/9252533/4926817
+  $("#var1").val(name);
+  $("#var2").val(loan);
+  $("#var3").val(photo);
+  $("#var4").val(industry);
+  $("#var5").val(interestRate);
+  $("#var6").val(duration);
+  
+  $("#form").submit();
 
-
-console.log(name);
-console.log(loan);
-console.log(interestRate);
-console.log(duration);
-console.log(industry);
-console.log(picture);
-
+  // url = './create?fullname=' + name + '&amount=' + loan + '&photo="http://deltahacks.com/src/images/logo@2x.png"&industry=' + industry + '&interest_rate=' + interestRate + '&duration_days=' + duration
+  // url = encodeURI(url);
+  // console.log(url)
+  // //basically redirect the page with all these parameters
+  // window.location = url
+  // lol this didn't work. see above for form instead
 };
-
-
 </script>
 
 `
