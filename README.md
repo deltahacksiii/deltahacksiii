@@ -13,7 +13,9 @@ What is Lendr built with? Lendr is a web application built with the Node.js fram
 
 Screenshots of our solution in action...
 ![screenshot1](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot1.png)
+<hr>
 ![screenshot2](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot2.png)
+<hr>
 ![screenshot3](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot3.png)
 
 What we'd do differently...
