@@ -40,24 +40,51 @@ app.post('/create', (req,res) => {
     console.log(query)
     connection.query(query, function (err, rows, fields) {
       if (err) throw err
-        
-        
-        //*********
-        
-        //*********
-        
-        
-        
+     
       res.send("<script>window.location.href = './loan/"+encodeURIComponent(fullname)+"'</script>");
     })
     
-     // const a = req.query.atest;
-    // const b = req.query.btest;
-    // var random = Math.floor(Math.random()*rows.length);
-
-    
-    
     connection.end()
+    
+})
+
+app.post('/bid', (req,res) => {
+    var lender_fullname = req.body.lender_fullname
+    var lender_email = req.body.lender_email
+    var new_interest_rate = req.body.new_interest_rate
+    var borrower_fullname = req.body.borrower_fullname
+    var mysql = require('mysql')
+    console.log(req.body)
+    console.log("****")
+    var connection = mysql.createConnection({
+      host: process.env.IP,
+      user: 'noamhacker',
+      password: '',
+      database: 'c9'
+    })
+    var all_rows;
+    connection.connect()
+    var random_loan;
+    var selectedrow = {}
+    var query = 'insert into loan_matches (lender_fullname, borrower_fullname, lender_email) values ("'+lender_fullname+'","'+borrower_fullname+'","'+lender_email+'")'
+    //consider if record already exists
+    query += ' ON DUPLICATE KEY UPDATE lender_fullname="' + lender_fullname + '", lender_email="' + lender_email + '"'
+    console.log(query)
+    connection.query(query, function (err, rows, fields) {
+      if (err) throw err
+        
+        query = 'update loans set interest_rate='+new_interest_rate+' where fullname="'+borrower_fullname+'"'
+        connection.query(query, function (err, rows, fields) {
+            if (err) throw err
+       
+            res.send("<script>window.location.href = './loan/"+encodeURIComponent(borrower_fullname)+"'</script>");
+            connection.end()
+        })
+     
+      
+    })
+    
+    
     
 })
 
