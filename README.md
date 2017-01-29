@@ -1,4 +1,4 @@
-# deltahacksiii - Hack for change - Lendr
+# deltahacksiii - Hack for Change - Lendr
 
 ### This hack aims to solve the typical problems surrounding loans
 
