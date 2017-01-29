@@ -1,4 +1,4 @@
-# deltahacksiii - Lendr
+# deltahacksiii - Hack for change - Lendr
 
 ### This hack aims to solve the typical problems surrounding loans
 
@@ -19,6 +19,7 @@ Screenshots of our solution in action...
 What we'd do differently...
 * Node.js was rewarding to learn, but we would have worked on a mobile application if we had more time for the setup and learning curve.
 * A full software stack such as MEAN would have made it easier to set up the database and build nicer looking views. We'd also like to reorganize and separate our code.
+* Implement a real sign-up/login process rather than having everything wide open
 
 Future features of Lendr...
 * A mobile version for users on the go
