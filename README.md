@@ -12,8 +12,12 @@ How can the world of finance benefit from this idea? These loans and money trans
 
 What is Lendr built with? Lendr is a web application built with the Node.js framework, the Express framework, and MySQL.
 
+### Awarded 'Best Personal Finance Hack', RBC's sponsor prize
+"Awarded to the best hack related to the management of personal finance. Tour of RBC’s Innovation Lab and interview/pitch with RBC’s Technology Team"
+![rbc photo](https://github.com/deltahacksiii/deltahacksiii/blob/master/rbc-photo.jpeg)
 
-Screenshots of our solution in action...
+### Screenshots of our solution in action...
+
 ![screenshot1](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot1.png)
 <hr>
 ![screenshot2](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot2.png)
