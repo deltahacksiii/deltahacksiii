@@ -35,3 +35,5 @@ Future features of Lendr...
 * Integration of algorithmic, real-time bidding
 * A media centre with testimonials, articles, and follow-ups from users
 * Machine learning to prioritize the loan match queue
+
+https://devpost.com/software/lendr
