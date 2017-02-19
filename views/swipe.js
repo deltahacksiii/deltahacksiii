@@ -44,10 +44,15 @@ module.exports = function(rows) {
                         <li class="pane7"><div class="img"></div><div><span class="big" id="fullname7"></span></div><div class="like"></div><div class="dislike"></div></li>
                         <li class="pane8"><div class="img"></div><div><span class="big" id="fullname8"></span></div><div class="like"></div><div class="dislike"></div></li>
                         <li class="pane9"><div class="img"></div><div><span class="big" id="fullname9"></span></div><div class="like"></div><div class="dislike"></div></li>
-                        <li class="pane10"><div class="img"></div><div><span class="big" id="fullname10"></span><br>amount<br>industry<br>interest rate<br>duration</div><div class="like"></div><div class="dislike"></div></li>
+                        <li class="pane10"><span class="med">lendr rating | credit score</span><div class="img"></div><div><span class="big" id="fullname10"></span><br><span class="med"><span id="amount10"></span><br><span id="industry10"></span><br><span id="interestrate10"></span><br><span id="duration10"></span></span></div><div class="like"></div><div class="dislike"></div></li>
                         <script>
                             $('.pane10 .img').css('background', 'url("'+rows[0]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname10").html(rows[0]['fullname']);
+                            $("#amount10").html("Wants to loan $" + rows[0]['amount']);
+                            $("#industry10").html("Industry: " + rows[0]['industry']);
+                            $("#interestrate10").html("Current interest rate: " + rows[0]['interest_rate'] + "%");
+                            $("#duration10").html("Duration: " + rows[0]['duration_days'] + " days");
+                            
                             $('.pane9 .img').css('background', 'url("'+rows[1]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname9").html(rows[1]['fullname']);
                             $('.pane8 .img').css('background', 'url("'+rows[2]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
