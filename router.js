@@ -1,5 +1,6 @@
 const express = require('express');
 const queue = require('./views/queue');
+const swipe = require('./views/swipe');
 const loan = require('./views/loan');
 const profile = require('./views/profile');
 const bodyParser = require('body-parser');
@@ -8,6 +9,8 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+var path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Ex: GET - http://localhost:3000/
@@ -126,6 +129,37 @@ app.get('/queue', (req, res) => {
    
 
 });
+
+app.get('/swipe', (req, res) => {
+    
+    var mysql = require('mysql')
+    var connection = mysql.createConnection({
+      host: process.env.IP,
+      user: 'noamhacker',
+      password: '',
+      database: 'c9'
+    })
+    var all_rows;
+    connection.connect()
+    var random_loan;
+    var selectedrow = {}
+    var rows_string;
+    var rows_json;
+    connection.query('SELECT * from loans', function (err, rows, fields) {
+      if (err) throw err
+      // get all rows
+      // shuffle all rows
+      rows = shuffle(rows)
+      rows_string = JSON.stringify(rows)
+      // rows_json = JSON.parse(rows)
+      // console.log(rows_string)
+      res.send(swipe(rows_string));
+    })
+
+    connection.end()
+
+});
+
 app.get('/profile', (req, res) => {
 
     // const a = req.query.atest;
@@ -183,5 +217,17 @@ app.get('/loan/:fullname', (req, res) => {
 	
 
 });
+
+// thanks http://stackoverflow.com/a/6274381/4926817
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
 
 module.exports = app;
