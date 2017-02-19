@@ -24,6 +24,9 @@ h2 {
 .big {
     font-size: 250%;
 }
+.med {
+    font-size: 180%;
+}
 
 /* Wrapper with padding */
 .wrap  {
@@ -134,6 +137,7 @@ h2 {
     height: 65%;
     width: 100%;
     margin-bottom: 5px;
+    margin-top: 40px;
     position: relative;
     -webkit-transform: translate3d(0%,0,0) scale3d(1,1,1);
     -moz-transform: translate3d(0%,0,0) scale3d(1,1,1);
