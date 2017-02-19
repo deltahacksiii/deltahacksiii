@@ -68,7 +68,7 @@ module.exports = function(testvar) {
 </div>
 <div id="section2" class="container-fluid">
   <h1>Loan</h1>
-  <p>How much money do you need to loan?</p>
+  <p>How much money do you need to borrow?</p>
   <input id = "textid2" type="text"></input>
 </div>
 <div id="section3" class="container-fluid">

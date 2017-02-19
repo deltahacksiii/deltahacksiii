@@ -37,7 +37,7 @@ module.exports = function(row, row2) {
     <h1 style="text-align:center; margin:0 auto;">Loan Status</h1><br>
     <div style="text-align:center; margin:0 auto;">
         <p><img class="contained" src='${row.photo}'></p>
-        <p>Name: ${row.fullname}</p>
+        <h4>Name: ${row.fullname}</h4>
         <p>Amount: $${row.amount}</p>
         <p>Industry: ${row.industry}</p>
         <p><strong>Interest rate: ${row.interest_rate}%</strong></p>
