@@ -123,7 +123,7 @@ function doSomething() {
   duration = document.getElementById('textid4').value;
   industry = document.getElementById('textid5').value;
   picture = document.getElementById('fileInput').value;
-  var photo = "http://deltahacks.com/src/images/logo@2x.png"
+  var photo = "http://i.imgur.com/xtOa350.png"
   
   console.log(name);
   console.log(loan);
@@ -144,7 +144,7 @@ function doSomething() {
   
   $("#form").submit();
 
-  // url = './create?fullname=' + name + '&amount=' + loan + '&photo="http://deltahacks.com/src/images/logo@2x.png"&industry=' + industry + '&interest_rate=' + interestRate + '&duration_days=' + duration
+  // url = './create?fullname=' + name + '&amount=' + loan + '&photo="http://i.imgur.com/xtOa350.png"&industry=' + industry + '&interest_rate=' + interestRate + '&duration_days=' + duration
   // url = encodeURI(url);
   // console.log(url)
   // //basically redirect the page with all these parameters
