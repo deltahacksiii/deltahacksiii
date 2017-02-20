@@ -145,11 +145,18 @@ app.get('/swipe', (req, res) => {
     var selectedrow = {}
     var rows_string;
     var rows_json;
+    var most_recent;
     connection.query('SELECT * from loans', function (err, rows, fields) {
       if (err) throw err
       // get all rows
+      // for the sake of the pitch demo, we want the most recently added loan to appear, say, as the 4th card in the stack
+      // therefore, we pop it from the array to get the most recent loan, hold onto it, shuffle the array, and slide it back into the 4th spot
+      most_recent = rows.pop();
       // shuffle all rows
       rows = shuffle(rows)
+      // add most_recent loan into 4th position
+      rows.splice(3, 0, most_recent)
+      // console.log(rows)
       rows_string = JSON.stringify(rows)
       // rows_json = JSON.parse(rows)
       // console.log(rows_string)
