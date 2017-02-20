@@ -33,15 +33,20 @@ module.exports = function(row, row2) {
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <h4><a href='/queue'>Back to queue</a></h4>
-    <h1 style="text-align:center; margin:0 auto;">Loan Status</h1><br>
-    <div style="text-align:center; margin:0 auto;">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Lobster');
+    </style>
+    
+    <h1>&nbsp;<a href='/swipe'>back to queue</a></h1>
+    <p style="text-align:center;" class="med">Loan Status</p><br>
+    <div style="text-align:center; border-top: 10px solid #8b8bff; border-bottom: 10px solid #8b8bff;">
+        <p class="med">lendr rating | credit score</p>
         <p><img class="contained" src='${row.photo}'></p>
-        <h4>Name: ${row.fullname}</h4>
-        <p>Amount: $${row.amount}</p>
-        <p>Industry: ${row.industry}</p>
-        <p><strong>Interest rate: ${row.interest_rate}%</strong></p>
-        <p>Duration: ${row.duration_days} days</p>
+        <p class="big">${row.fullname}</p>
+        <p class="med">Amount: $${row.amount}</p>
+        <p class="med">Industry: ${row.industry}</p>
+        <p class="med"><strong>Interest rate: ${row.interest_rate}%</strong></p>
+        <p class="med">Duration: ${row.duration_days} days</p>
     </div>
     <hr>
     <div style="text-align:center; margin:0 auto;">
@@ -71,11 +76,13 @@ module.exports = function(row, row2) {
         }
     </script>
     <style>
+      body {
+        background-color: #eeeeee;
+      }
       .contained {
-        max-width: 150px;
-        max-height: 150px;
-        min-width: 150px;
-        min-height: 150px;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
       }
       .card {
         border: 2px solid black;
@@ -85,6 +92,20 @@ module.exports = function(row, row2) {
       .middle {
         text-align: center;
         margin: 0 auto;
+      }
+      .big {
+        font-size: 500%;
+      }
+      .med {
+        font-size: 300%;
+      }
+      h1 {
+        font-size: 500%;
+        font-family: 'Lobster', cursive;
+        color: #8b8bff;
+      }
+      a {
+        color: #8b8bff;
       }
     </style>
     `
