@@ -23,14 +23,15 @@ module.exports = function(testvar) {
   <style>
   body {
       position: relative; 
+      background-color: #eeeeee;
   }
-  #section1 {padding-top:50px;height:500px;color: #000; background-color: #1E88E5;max-height: 200px;}
-  #section2 {padding-top:50px;height:500px;color: #000; background-color: #673ab7;max-height: 200px;}
-  #section3 {padding-top:50px;height:500px;color: #000; background-color: #ff9800;max-height: 200px;}
-  #section4 {padding-top:50px;height:500px;color: #000; background-color: #00bcd4;max-height: 200px;}
-  #section5 {padding-top:50px;height:500px;color: #000; background-color: #009688;max-height: 200px;}
-  #section6 {padding-top:50px;height:500px;color: #000; background-color: #7bf24f;max-height: 200px;}
-  #section7 {padding-top:50px;height:500px;color: #000; background-color: #f3fc41;max-height: 200px;}
+  #section1 {height:400px;color: #000; background-color: #1E88E5;max-height: 150px;border: 10px solid #eeeeee; border-radius: 30px;}
+  #section2 {height:500px;color: #000; background-color: #8561c5;max-height: 200px;border: 10px solid #eeeeee; border-radius: 30px;}
+  #section3 {height:500px;color: #000; background-color: #ff9800;max-height: 200px;border: 10px solid #eeeeee; border-radius: 30px;}
+  #section4 {height:500px;color: #000; background-color: #00bcd4;max-height: 200px;border: 10px solid #eeeeee; border-radius: 30px;}
+  #section5 {height:500px;color: #000; background-color: #009688;max-height: 200px;border: 10px solid #eeeeee; border-radius: 30px;}
+  #section6 {height:500px;color: #000; background-color: #7bf24f;max-height: 200px;border: 10px solid #eeeeee; border-radius: 30px;}
+  #section7 {height:500px;color: #000; background-color: #eeeeee;max-height: 200px;border: 10px solid #eeeeee; border-radius: 30px;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -61,13 +62,13 @@ module.exports = function(testvar) {
     </div>
   </div>
 </nav>-->    
-
+<h1>&nbsp;Create a loan</h1>
 <div id="section1" class="container-fluid">
   <h1>Name</h1>
   <input id = "textid" type="text"></input>
 </div>
 <div id="section2" class="container-fluid">
-  <h1>Loan</h1>
+  <h1>Amount</h1>
   <p>How much money do you need to borrow?</p>
   <input id = "textid2" type="text"></input>
 </div>
@@ -86,8 +87,8 @@ module.exports = function(testvar) {
   <p>What industry will this loan be put to use in?</p>
   <input id = "textid5" type="text"></input>
 </div>
-<div id="section6" class="container-fluid">
-  <h1>Profile picture</h1>
+<!-- <div id="section6" class="container-fluid">
+ <h1>Profile picture</h1>
 <div style="height:0px;overflow:hidden">
    <input type="file" id="fileInput" name="fileInput" />
 </div>
@@ -99,9 +100,10 @@ module.exports = function(testvar) {
    }
 </script>
 </div>
+-->
 <div id="section7" class="container-fluid">
 <h1>Confirm</h1>
-  <input id="clickMe" type="button" value="clickme" onclick="doSomething()" />
+  <button id="clickMe" type="button" class="btn btn-lg btn-success" onclick="doSomething()">Submit</button>
 </div>
   <form style="display: hidden" action="./create" method="POST" id="form">
     <input type="hidden" id="var1" name="fullname" value=""/>
@@ -122,7 +124,7 @@ function doSomething() {
   interestRate = document.getElementById('textid3').value;
   duration = document.getElementById('textid4').value;
   industry = document.getElementById('textid5').value;
-  picture = document.getElementById('fileInput').value;
+  //picture = document.getElementById('fileInput').value;
   var photo = "http://i.imgur.com/xtOa350.png"
   
   console.log(name);
@@ -130,7 +132,7 @@ function doSomething() {
   console.log(interestRate);
   console.log(duration);
   console.log(industry);
-  console.log(picture);
+  // console.log(picture);
   
   
   
