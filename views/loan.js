@@ -48,7 +48,7 @@ module.exports = function(row, row2) {
           <p class="med">Amount: $${row.amount}</p>
           <p class="med">Industry: ${row.industry}</p>
           <p class="med"><strong>Interest rate: ${row.interest_rate}%</strong></p>
-          <p class="med">Duration: ${row.duration_days} days</p>
+          <p class="med">Duration: ${row.duration_days} months</p>
         </td></tr></table>
     </div>
     <br><br><br>

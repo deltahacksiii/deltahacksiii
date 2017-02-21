@@ -54,70 +54,70 @@ module.exports = function(rows) {
                             $("#amount10").html("Wants to loan $" + rows[0]['amount']);
                             $("#industry10").html("Industry: " + rows[0]['industry']);
                             $("#interestrate10").html("Current interest rate: " + rows[0]['interest_rate'] + "%");
-                            $("#duration10").html("Duration: " + rows[0]['duration_days'] + " days");
+                            $("#duration10").html("Duration: " + rows[0]['duration_days'] + " months");
                             
                             $('.pane9 .img').css('background', 'url("'+rows[1]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname9").html(rows[1]['fullname']);
                             $("#amount9").html("Wants to loan $" + rows[1]['amount']);
                             $("#industry9").html("Industry: " + rows[1]['industry']);
                             $("#interestrate9").html("Current interest rate: " + rows[1]['interest_rate'] + "%");
-                            $("#duration9").html("Duration: " + rows[1]['duration_days'] + " days");
+                            $("#duration9").html("Duration: " + rows[1]['duration_days'] + " months");
                             
                             $('.pane8 .img').css('background', 'url("'+rows[2]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname8").html(rows[2]['fullname']);
                             $("#amount8").html("Wants to loan $" + rows[2]['amount']);
                             $("#industry8").html("Industry: " + rows[2]['industry']);
                             $("#interestrate8").html("Current interest rate: " + rows[2]['interest_rate'] + "%");
-                            $("#duration8").html("Duration: " + rows[2]['duration_days'] + " days");
+                            $("#duration8").html("Duration: " + rows[2]['duration_days'] + " months");
                             
                             $('.pane7 .img').css('background', 'url("'+rows[3]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname7").html(rows[3]['fullname']);
                             $("#amount7").html("Wants to loan $" + rows[3]['amount']);
                             $("#industry7").html("Industry: " + rows[3]['industry']);
                             $("#interestrate7").html("Current interest rate: " + rows[3]['interest_rate'] + "%");
-                            $("#duration7").html("Duration: " + rows[3]['duration_days'] + " days");
+                            $("#duration7").html("Duration: " + rows[3]['duration_days'] + " months");
                             
                             $('.pane6 .img').css('background', 'url("'+rows[4]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname6").html(rows[4]['fullname']);
                             $("#amount6").html("Wants to loan $" + rows[4]['amount']);
                             $("#industry6").html("Industry: " + rows[4]['industry']);
                             $("#interestrate6").html("Current interest rate: " + rows[4]['interest_rate'] + "%");
-                            $("#duration6").html("Duration: " + rows[4]['duration_days'] + " days");
+                            $("#duration6").html("Duration: " + rows[4]['duration_days'] + " months");
                             
                             $('.pane5 .img').css('background', 'url("'+rows[5]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname5").html(rows[5]['fullname']);
                             $("#amount5").html("Wants to loan $" + rows[5]['amount']);
                             $("#industry5").html("Industry: " + rows[5]['industry']);
                             $("#interestrate5").html("Current interest rate: " + rows[5]['interest_rate'] + "%");
-                            $("#duration5").html("Duration: " + rows[5]['duration_days'] + " days");
+                            $("#duration5").html("Duration: " + rows[5]['duration_days'] + " months");
                             
                             $('.pane4 .img').css('background', 'url("'+rows[6]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname4").html(rows[6]['fullname']);
                             $("#amount4").html("Wants to loan $" + rows[6]['amount']);
                             $("#industry4").html("Industry: " + rows[6]['industry']);
                             $("#interestrate4").html("Current interest rate: " + rows[6]['interest_rate'] + "%");
-                            $("#duration4").html("Duration: " + rows[6]['duration_days'] + " days");
+                            $("#duration4").html("Duration: " + rows[6]['duration_days'] + " months");
                             
                             $('.pane3 .img').css('background', 'url("'+rows[7]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname3").html(rows[7]['fullname']);
                             $("#amount3").html("Wants to loan $" + rows[7]['amount']);
                             $("#industry3").html("Industry: " + rows[7]['industry']);
                             $("#interestrate3").html("Current interest rate: " + rows[7]['interest_rate'] + "%");
-                            $("#duration3").html("Duration: " + rows[7]['duration_days'] + " days");
+                            $("#duration3").html("Duration: " + rows[7]['duration_days'] + " months");
                             
                             $('.pane2 .img').css('background', 'url("'+rows[8]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname2").html(rows[8]['fullname']);
                             $("#amount2").html("Wants to loan $" + rows[8]['amount']);
                             $("#industry2").html("Industry: " + rows[8]['industry']);
                             $("#interestrate2").html("Current interest rate: " + rows[8]['interest_rate'] + "%");
-                            $("#duration2").html("Duration: " + rows[8]['duration_days'] + " days");
+                            $("#duration2").html("Duration: " + rows[8]['duration_days'] + " months");
                             
                             $('.pane1 .img').css('background', 'url("'+rows[9]['photo']+'")'+' no-repeat scroll center center').css('background-size', 'cover')
                             $("#fullname1").html(rows[9]['fullname']);
                             $("#amount1").html("Wants to loan $" + rows[9]['amount']);
                             $("#industry1").html("Industry: " + rows[9]['industry']);
                             $("#interestrate1").html("Current interest rate: " + rows[9]['interest_rate'] + "%");
-                            $("#duration1").html("Duration: " + rows[9]['duration_days'] + " days");
+                            $("#duration1").html("Duration: " + rows[9]['duration_days'] + " months");
                         </script>
                     </ul>
                 </div>
