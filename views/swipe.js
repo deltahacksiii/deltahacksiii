@@ -26,7 +26,7 @@ module.exports = function(rows) {
     @import url('https://fonts.googleapis.com/css?family=Lobster');
     </style>
     
-    <h1>lendr</h1>
+    <h1><a href="/" style="color: #8b8bff">lendr</a></h1>
     <h2>Swipe to match with a loaner!</h2>
     
     <div class="row">

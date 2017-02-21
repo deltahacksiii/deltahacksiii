@@ -3,6 +3,7 @@ const queue = require('./views/queue');
 const swipe = require('./views/swipe');
 const loan = require('./views/loan');
 const profile = require('./views/profile');
+const home = require('./views/home');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -15,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Ex: GET - http://localhost:3000/
 app.get('/', (req, res) => {
-	res.send('Hello world!');
+	res.send(home('Hello world!'));
 });
 
 
