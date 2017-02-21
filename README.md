@@ -1,6 +1,7 @@
 # deltahacksiii - Hack for Change - Lendr
 
 ![landing page](https://github.com/deltahacksiii/deltahacksiii/blob/master/screenshot4.png)
+[![lendr demo video](https://raw.githubusercontent.com/deltahacksiii/deltahacksiii/master/demo%20screenshot.png)](https://www.youtube.com/watch?v=ctyTFx7DQng)
 
 ### This hack aims to solve the typical problems surrounding loans.
 
