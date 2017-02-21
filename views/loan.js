@@ -39,20 +39,27 @@ module.exports = function(row, row2) {
     
     <h1>&nbsp;<a href='/swipe'>back to queue</a></h1>
     <p style="text-align:center;" class="med">Loan Status</p><br>
-    <div style="text-align:center; border-top: 10px solid #8b8bff; border-bottom: 10px solid #8b8bff;">
+    <div style="text-align:center; border-top: 10px solid #8b8bff;">
         <p class="med">lendr rating | credit score</p>
-        <p><img class="contained" src='${row.photo}'></p>
-        <p class="big">${row.fullname}</p>
-        <p class="med">Amount: $${row.amount}</p>
-        <p class="med">Industry: ${row.industry}</p>
-        <p class="med"><strong>Interest rate: ${row.interest_rate}%</strong></p>
-        <p class="med">Duration: ${row.duration_days} days</p>
+        <table><tr><td style="width:40%;">
+          <p><img class="contained" src='${row.photo}'></p>
+        </td><td>
+          <p class="big">${row.fullname}</p>
+          <p class="med">Amount: $${row.amount}</p>
+          <p class="med">Industry: ${row.industry}</p>
+          <p class="med"><strong>Interest rate: ${row.interest_rate}%</strong></p>
+          <p class="med">Duration: ${row.duration_days} months</p>
+        </td></tr></table>
     </div>
-    <hr>
-    <div style="text-align:center; margin:0 auto;">
-        <h3>${row2.empty}</h3>
-        <h3>${row2.lender_fullname}${row2.lender_email}</h3>
-        <p>Make a lower bid! <input type="text" placeholder="New interest rate" id="bid"><input type="text" placeholder="name" id="name"><input type="text" placeholder="email" id="email"><input type="button" value="submit" onclick="make_a_bid()"></p>
+    <br><br><br>
+    <div style="text-align:center; margin:0 auto; background-color: #7FBF7F; border: 15px solid #eeeeee; border-radius: 50px;">
+        <p class="big">${row2.empty}</p>
+        <p class="big">${row2.lender_fullname}${row2.lender_email}</p>
+        <p class="med">Make a lower bid!</p><br>
+        <input class="big" type="number" placeholder="Lower interest rate" id="bid"><br><br>
+        <input class="big" type="text" placeholder="Name" id="name"><br><br>
+        <input class="big" type="text" placeholder="Email" id="email"><br><br>
+        <button type="button" class="big btn btn-primary" onclick="make_a_bid()">Submit</button><br><br>
         <form style="display: hidden" action="/bid" method="POST" id="form">
           <input type="hidden" id="var1" name="lender_fullname" value=""/>
           <input type="hidden" id="var2" name="lender_email" value=""/>

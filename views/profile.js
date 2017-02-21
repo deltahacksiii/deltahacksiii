@@ -35,7 +35,7 @@ module.exports = function(testvar) {
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -60,7 +60,7 @@ module.exports = function(testvar) {
       </div>
     </div>
   </div>
-</nav>    
+</nav>-->    
 
 <div id="section1" class="container-fluid">
   <h1>Name</h1>
@@ -78,7 +78,7 @@ module.exports = function(testvar) {
 </div>
 <div id="section4" class="container-fluid">
   <h1>Duration</h1>
-  <p>How many days do you need until you can pay back this loan?</p>
+  <p>How many months do you need until you can pay back this loan?</p>
   <input id = "textid4" type="text"></input>
 </div>
 <div id="section5" class="container-fluid">
