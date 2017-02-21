@@ -55,9 +55,9 @@ module.exports = function(testvar) {
     <h1>lendr</h1>
     <br><br><br><br><br><br><br>
     <div>
-    <button class="btn btn-xlarge btn-primary" onclick="location.href='/profile';">Loan $$</button>
+    <button class="btn btn-xlarge btn-primary" onclick="location.href='/profile';">Loan</button>
     <br><br><br><br><br>
-    <button class="btn btn-xlarge btn-primary" onclick="location.href='/swipe';">Lend $$</button>
+    <button class="btn btn-xlarge btn-primary" onclick="location.href='/swipe';">Lend</button>
     <br><br><br><br><br><br>
     <button class="btn btn-mlarge btn-default">Update Profile</button></div>
     </div>
